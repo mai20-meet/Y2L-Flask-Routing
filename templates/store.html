@@ -4,13 +4,19 @@
 	<title></title>
 </head>
 <body>
+<h1>hello {{name}}</h1>
+
 <a href="{{url_for('home')}}">linking 1 time babem</a>
 <a href="{{url_for('store')}}">linking 2 times kapaow</a>
 <a href="{{url_for('store')}}">linking 3 times bam</a>
-<h1>title okkk</h1>
-<img src="https://i.pinimg.com/736x/9c/4d/b8/9c4db8112505ee7d9a13667a41cc4fda.jpg" alt="picture boom">
+{%for i in p%}
+<h1>{{i.name}}</h1>
+<img src="{{i.picture_link}}" alt="double hamburger">
 
- <button type="button"><a href = "{{url_for('cart')}}">Adopt Me!</a></button> 
+
+
+ <button type="button"><a href = "{{url_for('cart')}}">eat me!</a></button> 
+{%endfor%}
 
 </body>
 </html>
