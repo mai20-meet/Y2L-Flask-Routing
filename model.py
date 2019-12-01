@@ -16,6 +16,7 @@ class product(Base):
 class cart(Base):
    __tablename__ = 'carts'
    id = Column(Integer, primary_key=True)
+  
 
 
 

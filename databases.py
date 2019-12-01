@@ -5,13 +5,14 @@ from model import *
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-def con():
-  engine = create_engine('sqlite:///database.db')
-  Base.metadata.create_all(engine)
-  DBSession = sessionmaker(bind=engine)
-  return DBSession()
+engine = create_engine('sqlite:///database.db')
+Base.metadata.create_all(engine)
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
 
-def add_product(session, name, price, picture_link, description):
+cart = []
+
+def add_product(name, price, picture_link, description):
     product_object = product(
         name=name,
         price=price,
@@ -19,42 +20,39 @@ def add_product(session, name, price, picture_link, description):
         description=description)
     session.add(product_object)
     session.commit()
-add_product(con(), "hamburger",20, "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/165384.jpg", "this is the most tasty burger in the world' the one that you just want to bite it and eat 20 of it")
+#add_product( "hamburger",20, "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/165384.jpg", "this is the most tasty burger in the world' the one that you just want to bite it and eat 20 of it")
 
-def update_lab_status(session, name, finished_lab):
+def update_product_status(name, price, picture_link, description):
 
    product_object = session.query(
        product).filter_by(
-       product_id=product_id).first()
-   product_object.finished_lab = finished_lab
+       name=name).first()
+   product_object.price = price
    session.commit()
 
 
-def delete_product(session, their_name):
+def delete_product(their_name):
 
    session.query(product).filter_by(
-       product_id=product_id).delete()
+       name=name).delete()
    session.commit()
 
 
-def query_all(session):
+def query_all():
 
   products = session.query(product).all()
   return products
 
 
 
-def query_by_id(session):
+def query_by_name():
 
-  products = session.query(product_id=product_id)
+  products = session.query(name=name)
   return products
 
-def Add_To_Cart(session, cart):
-    product_object = product(
-         cart=cart)
-    session.add(product_object)
-    session.commit()
+def Add_To_Cart(product_id):
+  product = session.query(id = product_id)
+  cart.append(product)
+  return product
 
-
-
-print(query_all(con()))
+print(query_all())
