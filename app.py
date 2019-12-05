@@ -13,12 +13,12 @@ def home():
 
 @app.route('/store')
 def store():
-	return render_template("store.html", p = query_all(), name = "bonzo")
+	return render_template("store.html", p = query_all(), name = "hamburgar")
 
 
 @app.route('/cart')
 def cart():
-	
+
 	return render_template("cart.html")
 
 @app.route('/add_product')
@@ -38,8 +38,6 @@ def update_the_product_status():
 	description = request.form['description']
 	update_the_product_status(name, price, picture_link, description)
 	return render_template("store.html")
-
-
 
 
 if __name__ == '__main__':
