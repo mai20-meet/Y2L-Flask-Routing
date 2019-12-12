@@ -7,35 +7,35 @@
 # third_word = raw_input("third_word")
 # print(third_word)
 
-# print(third_word + First_word)
-# print(third_word + second_word)
+# # print(third_word + First_word)
+# # print(third_word + second_word)
 
 # user_name = raw_input("user_name")
 # print("hey there" + user_name)
 
-# # his age because we ere doing an if statment that based on the user's age
+# his age because we ere doing an if statment that based on the user's age
 
-# raw_input("think about an animal from the list:a goose, a horse, a dog, a cat, a duck, a penguin")
+raw_input("think about an animal from the list:a goose, a horse, a dog, a cat, a duck, a penguin")
 
-# animal = raw_input("is it a bird?")
-# if animal == "yes":
-# 	animal = raw_input("is it a bird that can fly?")
-# elif animal == "no":
-# 	animal = raw_input("Does your animal migrate for the winter?")
-# if animal == "no":
-# 	print("your animal is a duck")
-# elif animal== "yes":
-# 	print("your animal is a goose")
-# if animal == "no":
-# 	animal = raw_input("Is your animal smaller than a human being?")
-# if animal == "yes":
-# 	animal = raw_input("Does your animal love humans?")
-# elif animal == "no":
-# 	print("the animal name is a cat")
-# elif animal =="yes":
-# 	print("your animal is a dog")
-# if animal == "no":
-# 	print("your animal is a horse")
+animal = raw_input("is it a bird?")
+if animal == "yes":
+	animal = raw_input("is it a bird that can fly?")
+elif animal == "no":
+	animal = raw_input("Does your animal migrate for the winter?")
+if animal == "no":
+	print("your animal is a duck")
+elif animal== "yes":
+	print("your animal is a goose")
+if animal == "no":
+	animal = raw_input("Is your animal smaller than a human being?")
+if animal == "yes":
+	animal = raw_input("Does your animal love humans?")
+elif animal == "no":
+	print("the animal name is a cat")
+elif animal =="yes":
+	print("your animal is a dog")
+if animal == "no":
+	print("your animal is a horse")
 			
 # pizza = raw_input("would you like pick up or delivery?")
 # if pizza == "pickup":
@@ -99,19 +99,19 @@
 # print(cookie_counter) 
 
 
-nterms = int(input("How many terms? "))
-n1, n2 = 0, 1
-count = 0
-if nterms <= 0:
-   print("Please enter a positive integer")
-elif nterms == 1:
-   print("Fibonacci sequence upto",nterms,":")
-   print(n1)
-else:
-   print("Fibonacci sequence:")
-   while count < nterms:
-       print(n1)
-       nth = n1 + n2
-       n1 = n2
-       n2 = nth
-       count += 1
+# nterms = int(input("How many terms? "))
+# n1, n2 = 0, 1
+# count = 0
+# if nterms <= 0:
+#    print("Please enter a positive integer")
+# elif nterms == 1:
+#    print("Fibonacci sequence upto",nterms,":")
+#    print(n1)
+# else:
+#    print("Fibonacci sequence:")
+#    while count < nterms:
+#        print(n1)
+#        nth = n1 + n2
+#        n1 = n2
+#        n2 = nth
+#        count += 1
