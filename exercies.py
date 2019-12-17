@@ -53,30 +53,32 @@ if pizza_size == "m":
 elif pizza_size == "l":
 	print("you chose l")
 
-# #i need help with this exercies 
-# number = 36
-# divisor_counter = 0
-# for i in range(1, 37):
-# 	if number% i == 0:
-# 		divisor_counter=+ 1
-# print(" the number " + str(number) + " has " + str(divisor_counter) + " divisors ")
+number = 36
+divisor_counter = 0
+for i in range(1,37):
+	if (number% i) == 0:
+		divisor_counter += 1 
+print(" the number " + str(number) + " has " + str(divisor_counter) + " divisors ")
+# divisor_counter += 1
+# divisor_counter = divisor_counter + 1
+# divisor_counter =+ 1
+# divisor_counter = 1
 
-# checked_number = 0
-# for i in range(1, 101):
-# 	if checked_number% 2 == 0:
-# 		print(i)
+checked_number = 0
+for i in range(1, 101):
+	if i% 2 != 0:
+		print(i)
 
-# #i need help with this exercies
-# def get_divisor_amount(number):
-# 	divisor_counter = 0
-# 	for i in range(1, 37):
-# 		if number_to_check% i == 0:
-# 			divisor_counter=+ 1
-# 	return divisor_counter
+def get_divisor_amount(number):
+	divisor_counter = 0
+	for i in range(1, 37):
+		if (number% i) == 0:
+			divisor_counter+= 1
+	return divisor_counter
 
-# number_to_check = 36
-# divisor_amount = get_divisor_amount(number_to_check)
-# print(" the number " + str(number_to_check) + " has " + str(divisor_amount) + " divisors ")
+number_to_check = 36
+divisor_amount = get_divisor_amount(number_to_check)
+print(" the number " + str(number_to_check) + " has " + str(divisor_amount) + " divisors ")
 
 def prime_number_check():
 	checked_prime_number = 0
